@@ -85,7 +85,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4695" top="555" width="480" height="480">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
@@ -97,7 +97,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Select second|">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -128,7 +128,7 @@
    </LINK>
    <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Sample">
    </LINK>
-   <NODE systemname="Select correlations" filename="subpatches\Select correlations.v4p" nodename="Kinect Recombination test\subpatches\Select correlations.v4p" componentmode="InAWindow" id="22">
+   <NODE systemname="Select correlations" filename="subpatches\Select correlations.v4p" nodename="Kinect Recombination test\subpatches\Select correlations.v4p" componentmode="Hidden" id="22">
    <BOUNDS type="Node" left="3675" top="5460" width="3105" height="270">
    </BOUNDS>
    <PIN pinname="XYZL" visible="1">
@@ -175,7 +175,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4695" top="6195" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="m" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="m">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -203,7 +203,7 @@
    </BOUNDS>
    <PIN pinname="Input Value" visible="1">
    </PIN>
-   <PIN pinname="Send String" slicecount="1" values="WorldView.ViewProjection" encoded="0">
+   <PIN pinname="Send String" slicecount="1" encoded="0" values="WorldView.ViewProjection">
    </PIN>
    </NODE>
    <LINK srcnodeid="35" srcpinname="View Projection" dstnodeid="38" dstpinname="Input Value">
@@ -271,13 +271,13 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Select points|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Select points|">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="46" srcpinname="Y Output Value" dstnodeid="22" dstpinname="Calibrate" linkstyle="Bezier" hiddenwhenlocked="1">
@@ -298,14 +298,18 @@
    </LINK>
    <LINK srcnodeid="47" srcpinname="Output" dstnodeid="3" dstpinname="View combined">
    </LINK>
-   <NODE systemname="Create Transform" filename="subpatches\Create Transform.v4p" nodename="subpatches\Create Transform.v4p" componentmode="InAWindow" id="52">
-   <BOUNDS type="Node" left="5265" top="6810" width="100" height="100">
+   <NODE systemname="Create Transform" filename="subpatches\Create Transform.v4p" nodename="subpatches\Create Transform.v4p" componentmode="Hidden" id="52">
+   <BOUNDS type="Node" left="5265" top="6810" width="3000" height="270">
    </BOUNDS>
    <PIN pinname="Line-View1" visible="1">
    </PIN>
    <PIN pinname="Line-View2" visible="1">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="5175" top="2655" width="10020" height="12495">
+   </BOUNDS>
+   <PIN pinname="Rotate">
    </PIN>
    </NODE>
    <LINK srcnodeid="22" srcpinname="Output1" dstnodeid="52" dstpinname="Line-View1" linkstyle="VHV">
@@ -321,5 +325,21 @@
    </LINKPOINT>
    <LINKPOINT x="6735" y="4943">
    </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="53" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="8220" top="5385" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8220" top="5385" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0.095">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Rotate" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="53" srcpinname="Y Output Value" dstnodeid="52" dstpinname="Rotate">
    </LINK>
    </PATCH>

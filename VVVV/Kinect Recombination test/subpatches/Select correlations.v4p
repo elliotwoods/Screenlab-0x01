@@ -501,6 +501,8 @@
    </PIN>
    <PIN pinname="Priority 2" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="27" srcpinname="Layer" dstnodeid="32" dstpinname="Input Node">
    </LINK>
@@ -593,7 +595,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4470" top="5805" width="480" height="480">
    </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -629,7 +631,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -637,7 +639,9 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Calibrate" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Calibrate">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="67" srcpinname="Y Output Value" dstnodeid="66" dstpinname="Input 2">
@@ -647,7 +651,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3825" top="8160" width="480" height="480">
    </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -657,5 +661,11 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="66" srcpinname="Output" dstnodeid="68" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="67" srcpinname="Y Output Value" dstnodeid="27" dstpinname="Enabled" linkstyle="Bezier">
+   <LINKPOINT x="5385" y="6248">
+   </LINKPOINT>
+   <LINKPOINT x="11085" y="6248">
+   </LINKPOINT>
    </LINK>
    </PATCH>

@@ -95,9 +95,9 @@
    <NODE systemname="PipetWorld" filename="%VVVV%\addonpack\lib\nodes\modules\Kinect\PipetWorld.v4p" nodename="%VVVV%\addonpack\lib\nodes\modules\Kinect\PipetWorld.v4p" componentmode="Hidden" id="44">
    <BOUNDS type="Node" left="5370" top="10425" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="12060" top="390" width="5550" height="11775">
+   <BOUNDS type="Window" left="12060" top="390" width="5550" height="12180">
    </BOUNDS>
-   <PIN pinname="World" visible="1" slicecount="1" values="||">
+   <PIN pinname="World" visible="1">
    </PIN>
    <PIN pinname="RGB" visible="1" slicecount="1" values="||">
    </PIN>
@@ -399,7 +399,7 @@
    </BOUNDS>
    <PIN pinname="Input Node">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="ViewProjection" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="ViewProjection">
    </PIN>
    </NODE>
    <LINK srcnodeid="72" srcpinname="Output Node" dstnodeid="44" dstpinname="ViewProjection">
@@ -447,7 +447,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="570" top="6525" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Layer" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Layer">
    </PIN>
    </NODE>
    <LINK srcnodeid="17" srcpinname="Layer" dstnodeid="77" dstpinname="Input Node">
@@ -573,7 +573,7 @@
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Transform second|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Transform second|">
    </PIN>
    </NODE>
    <LINK srcnodeid="85" srcpinname="Output Node" dstnodeid="84" dstpinname="Input 2">
@@ -603,5 +603,61 @@
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="84" srcpinname="Output" dstnodeid="86" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="87">
+   <BOUNDS type="Node" left="2355" top="4545" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="87" srcpinname="Output Node" dstnodeid="44" dstpinname="RGB" linkstyle="Bezier">
+   <LINKPOINT x="2415" y="7620">
+   </LINKPOINT>
+   <LINKPOINT x="5370" y="7620">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="88">
+   <BOUNDS type="Node" left="3735" top="4530" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="88" srcpinname="Output Node" dstnodeid="44" dstpinname="World" linkstyle="Bezier">
+   <LINKPOINT x="3780" y="7613">
+   </LINKPOINT>
+   <LINKPOINT x="5730" y="7613">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="54" srcpinname="Texture Out" dstnodeid="88" dstpinname="Input Node" linkstyle="VHV">
+   <LINKPOINT x="3540" y="4403">
+   </LINKPOINT>
+   <LINKPOINT x="3735" y="4403">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="53" srcpinname="Texture Out" dstnodeid="87" dstpinname="Input Node" linkstyle="VHV">
+   <LINKPOINT x="2100" y="4410">
+   </LINKPOINT>
+   <LINKPOINT x="2340" y="4410">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="46" srcpinname="Y Output Value" dstnodeid="88" dstpinname="Index" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="6225" y="3008">
+   </LINKPOINT>
+   <LINKPOINT x="4455" y="3008">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="46" srcpinname="Y Output Value" dstnodeid="87" dstpinname="Index" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="6225" y="3000">
+   </LINKPOINT>
+   <LINKPOINT x="3090" y="3000">
+   </LINKPOINT>
    </LINK>
    </PATCH>
